@@ -30,4 +30,4 @@ if(count ($allletters)>0){
     <?php 
     }    
 }
-    ?>
+    

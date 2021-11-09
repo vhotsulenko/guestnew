@@ -1,8 +1,7 @@
 <?php
-    //вызовем метод deletePost
-    if($result){
+     if($result){
      $gbook->deleteLetter($result);
      return;
     }
-     ?>
+     
     
