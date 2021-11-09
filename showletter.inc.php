@@ -5,10 +5,10 @@ $allletters=$gbook->showLetter();
 //Используя цикл, выведите в браузер все сообщения
 if(count ($allletters)>0){
     foreach($allletters as $row){
-        $id=$row['id'];
-        $gname=$row['gname'];
-        $letter=$row['letter'];
-        @$dt=date("d-m-Y H:i:s", $row['datetime']*1);
+        $id = $row['id'];
+        $gname = $row['gname'];
+        $letter = $row['letter'];
+        @$dt = date("d-m-Y H:i:s", $row['datetime']*1);
     ?>
     <div class="quote">
         <div class="quote-icon">
@@ -18,12 +18,11 @@ if(count ($allletters)>0){
         <div class="quote-content">
                 <p class="droid"><strong><?php echo $gname ?></strong><span class="data"><?php echo @$dt ?></span><br><?php echo $letter ?></p>
         </div>
-        <div class="quote-close">
+        <div class="del">
         <form action="mybook.php" method="POST">
-            <input type="hidden" name="res" value="<?php echo 'del:'. $id ?>" />
-            <input type="image" src="close.png" alt="">
+            <input type="hidden" name="res" value = "<?php echo $id ?>" label =""/>
+            <input type="image" src="close.png" alt="" label =""/>
         </form>
-
         </div>
     </div>
     <div class="clear"></div>
