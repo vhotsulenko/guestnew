@@ -1,6 +1,6 @@
 <?php
 //Подключим файл с описанием класса mybook
-require "mybook.class.php";
+require 'mybook.class.php';
 //Создадим объект gbook
 $gbook=new mybook();
 //Создадим переменную $errMessage со строковым значением ""
@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 //Проверяем был ли запрос методом GET на удаление записи
 // Если ДА, то подключаем файл с кодом для удаления записи
 if(isset($_GET['del'])){
-    require "deleteletter.inc.php";
+    require 'deleteletter.inc.php';
 }
 ?>
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ if(isset($_GET['del'])){
         <section id="content" class="container">
             		
                     <?php
-                        require "showletter.inc.php";
+                        require 'showletter.inc.php';
                     ?>
                    <h2>Оставить отзыв</h2>
                    <?php

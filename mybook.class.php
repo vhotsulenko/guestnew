@@ -1,6 +1,6 @@
 <?php
 //подключаем файл с интерфейсом
-require "Imybook.class.php";
+require 'Imybook.class.php';
 //созд. класс mybook наследующий интерфейс Imybook
 class mybook  implements Imybook{
 //созд. константу класса DB_NAME и присваиваем ей значение mybook.db
