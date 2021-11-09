@@ -59,7 +59,7 @@ class mybook  implements Imybook{
     }
 
     function printLetter($id){
-
+            //пока не знаю
     }
 }
 

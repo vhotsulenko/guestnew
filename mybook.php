@@ -10,8 +10,9 @@ $errMessage="";
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 if(isset($_POST["res"])){
-    $pieces = explode(":", $_POST["res"]);
-    $result = $pieces[1];
+   // echo var_dump($_POST["res"]);
+   // $pieces = explode(":", $_POST["res"]);
+    $result = $_POST["res"];//$pieces[1];
    $result = require 'deleteletter.inc.php'; 
 } else
     include "saveletter.inc.php";
