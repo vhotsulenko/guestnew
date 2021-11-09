@@ -19,11 +19,10 @@ if(!empty($gname) && !empty($letter)){
      if($gbook->saveLetter($gname, $letter)){
     // Перезапрашиваем страницу, чтобы избавиться от информации, 
     //переданной через форму
-        header('Location: mybook.php');
+         header("Location: index.php");
      }else{
         $errMessage="Произошла ошибка при добавлении сообщения";
      }
 }else{
     $errMessage="Заполните все поля формы!";
 }
-header("Location: index.php");

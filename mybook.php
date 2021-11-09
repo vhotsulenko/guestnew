@@ -1,6 +1,6 @@
 <?php
 //Подключим файл с описанием класса mybook
-include "mybook.class.php";
+require "mybook.class.php";
 //Создадим объект gbook
 $gbook=new mybook();
 //Создадим переменную $errMessage со строковым значением ""
@@ -10,10 +10,10 @@ $errMessage="";
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     if(isset($_POST["res"])){
        $result = $_POST["res"];
-       $result = require 'deleteletter.inc.php'; 
+       $result = require "deleteletter.inc.php"; 
        header("Location: index.php");
     } else
-       include "saveletter.inc.php";
+    require "saveletter.inc.php";
 }
 ?>
 
@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         <section id="content" class="container">
             		
                     <?php
-                        include "showletter.inc.php";
+                        require_once "showletter.inc.php";
                     ?>
                    <h2>Оставить отзыв</h2>
                    <?php

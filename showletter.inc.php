@@ -21,7 +21,7 @@ if(count ($allletters)>0){
         <div>
         <form action="mybook.php" method="POST">
             <input type="hidden" name="res" value = "<?php echo $id ?>" label =""/>
-            <input type="image" width=36px src="close.png" alt="" label =""/>
+            <input type="image" width="36px" src="close.png" alt="" label =""/>
         </form>
         </div>
     </div>

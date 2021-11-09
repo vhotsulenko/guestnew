@@ -1,6 +1,6 @@
 <?php
 //Подключим файл с описанием класса mybook
-include "mybook.class.php";
+require "mybook.class.php";
 //Создадим объект gbook
 $gbook=new mybook();
 //Создадим переменную $errMessage со строковым значением ""
@@ -8,12 +8,12 @@ $errMessage="";
 //проверим была ли отправлена HTML-форма
 //Если ДА, то подключите файл с кодом для обработки HTML-формы
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-    include "saveletter.inc.php";
+    require_once "saveletter.inc.php";
 }
 //Проверяем был ли запрос методом GET на удаление записи
 // Если ДА, то подключаем файл с кодом для удаления записи
 if(isset($_GET['del'])){
-    include "deleteletter.inc.php";
+    require_once "deleteletter.inc.php";
 }
 ?>
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ if(isset($_GET['del'])){
         <section id="content" class="container">
             		
                     <?php
-                        include "showletter.inc.php";
+                        require_once "showletter.inc.php";
                     ?>
                    <h2>Оставить отзыв</h2>
                    <?php
