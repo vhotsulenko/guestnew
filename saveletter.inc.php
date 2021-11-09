@@ -26,3 +26,4 @@ if(!empty($gname) && !empty($letter)){
 }else{
     $errMessage="Заполните все поля формы!";
 }
+header("Location: index.php");

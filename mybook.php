@@ -8,20 +8,14 @@ $errMessage="";
 //проверим была ли отправлена HTML-форма
 //Если ДА, то подключите файл с кодом для обработки HTML-формы
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-
-if(isset($_POST["res"])){
-   // echo var_dump($_POST["res"]);
-   // $pieces = explode(":", $_POST["res"]);
-    $result = $_POST["res"];//$pieces[1];
-   $result = require 'deleteletter.inc.php'; 
-} else
-    include "saveletter.inc.php";
+    if(isset($_POST["res"])){
+       $result = $_POST["res"];
+       $result = require 'deleteletter.inc.php'; 
+    } else
+       include "saveletter.inc.php";
+       header("Location: index.php");
 }
-//Проверяем был ли запрос методом GET на удаление записи
-// Если ДА, то подключаем файл с кодом для удаления записи
-//if(isset($_GET['del'])){
- //   include "deleteletter.inc.php";
-//}
+
 
 ?>
 <!DOCTYPE html>
