@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         <section id="content" class="container">
             		
                     <?php
-                        require_once "showletter.inc.php";
+                        require "showletter.inc.php";
                     ?>
                    <h2>Оставить отзыв</h2>
                    <?php
