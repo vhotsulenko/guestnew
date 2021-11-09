@@ -15,9 +15,6 @@ if(isset($_POST["res"])){
    $result = require 'deleteletter.inc.php'; 
 } else
     include "saveletter.inc.php";
-
-
-
 }
 //Проверяем был ли запрос методом GET на удаление записи
 // Если ДА, то подключаем файл с кодом для удаления записи

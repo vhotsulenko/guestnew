@@ -20,7 +20,7 @@ if(count ($allletters)>0){
         </div>
         <div class="quote-close">
         <form action="mybook.php" method="POST">
-            <input type="hidden" name="res" value="<?php echo 'del:'.$id ?>" />
+            <input type="hidden" name="res" value="<?php echo 'del:'. $id ?>" />
             <input type="image" src="close.png" alt="">
         </form>
 
