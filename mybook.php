@@ -11,13 +11,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     if(isset($_POST["res"])){
        $result = $_POST["res"];
        $result = require 'deleteletter.inc.php'; 
+       header("Location: index.php");
     } else
        include "saveletter.inc.php";
-       header("Location: index.php");
 }
-
-
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
