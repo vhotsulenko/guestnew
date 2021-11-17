@@ -18,12 +18,17 @@ if(count ($allletters)>0){
         <div class="quote-content">
                 <p class="droid"><strong><?php echo $gname ?></strong><span class="data"><?php echo @$dt ?></span><br><?php echo $letter ?></p>
         </div>
-        <div>
+        <div class="icon-img">
         <form action="mybook.php" method="POST">
             <input type="hidden" name="res" value = "<?php echo $id ?>" label =""/>
-            <input type="image" width="36px" src="close.png" alt="" label =""/>
+            <input type="image" src="close.png" alt="удалить" label =""/>
+        </form>
+        <form action="mybook.php" method="POST">
+            <input type="hidden" name="prt" value = "<?php echo $id ?>" label =""/>
+            <input type="image" src="print.png" alt="печать" label =""/>
         </form>
         </div>
+        
     </div>
     <div class="clear"></div>
     <?php 
