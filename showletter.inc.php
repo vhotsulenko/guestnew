@@ -21,11 +21,11 @@ if(count ($allletters)>0){
          <div>
         <form action="mybook.php" method="POST">
             <input type="hidden" name="res" value = "<?php echo $id ?>" label ="">
-            <input type="image" src="close.png" alt="удалить" label ="">
+            <input type="image" width=36px src="close.png" alt="удалить" label =""align="right">
         </form>
         <form action="mybook.php" method="POST">
             <input type="hidden" name="prt" value = "<?php echo $id ?>" label ="">
-            <input type="image" src="print.png" alt="печать" label ="">
+            <input type="image" width=36px src="print.png" alt="печать" label ="" align="right">
         </form>
         </div>
         

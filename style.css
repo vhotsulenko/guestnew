@@ -108,12 +108,6 @@ img{
     font-size: 14px;
     margin-left: 50px;
 }
-input[type="image"] {
-    width: 36px;
-    height: 36px;
-}
 input[type=text]:focus{
     background: rgb(239, 238, 250);
-    -webkit-box-shadow: 0 0 4px 3px rgba(255,255,255,0.7);
-  }
-  
+}

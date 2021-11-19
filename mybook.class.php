@@ -16,7 +16,7 @@ class mybook  implements Imybook{
             $sql="CREATE TABLE letters(
                 id INTEGER PRIMARY KEY,
                 gname TEXT,
-                letter TEXT,
+                letter BLOB,
                 datetime INTEGER
             )";
             $this->_db->query($sql);
@@ -59,7 +59,13 @@ class mybook  implements Imybook{
     }
 
     function printLetter($id){
-            //пока не знаю
+        $sql = "SELECT letter FROM letters WHERE id=$id";
+        $conn = $this->_db->query($sql);
+        echo $conn;
+       // $stream = openBlob('letters', 'letter', 3, 'main', SQLITE3_OPEN_READWRITE);
+       // echo stream_get_contents($stream);
+      //  fclose($stream); 
+        
     }
 }
 
