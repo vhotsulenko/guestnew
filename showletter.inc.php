@@ -25,12 +25,20 @@ if(count ($allletters)>0){
         </form>
         
             
-            <input type="image"  src="print.png" align="right" width=36px onclick="alert('<?php echo $letter ?>')" >
+            <input id="prt" type="image"  src="print.png" align="right" width=36px >
       
         </div>
         
     </div>
     <div class="clear"></div>
+
+    <script type="text/JavaScript"> 
+  prt.onclick = function() {
+    alert('Спасибо');
+    alert('<?php echo $letter ?>');
+  };
+</script>
+
 <script type="text/JavaScript"> 
       //     function print_letter (txt) {
         //       alert('txt')
