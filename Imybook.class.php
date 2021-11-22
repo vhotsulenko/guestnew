@@ -7,6 +7,6 @@ interface Imybook{
 //Удаление записи из Гостевой книги
     function deleteLetter($id);
     //выбор записи 
-    function choice($id);
+    function choiceLetter($id);
 }
 

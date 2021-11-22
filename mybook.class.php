@@ -58,7 +58,7 @@ class mybook  implements Imybook{
         $this->_db->query($sql);
     }
 
-    function choice($id){
+    function choiceLetter($id){
         $sql = "SELECT letter FROM letters WHERE id=$id";
         $res=$this->_db->query($sql);
         return $res;
