@@ -58,14 +58,17 @@ class mybook  implements Imybook{
         $this->_db->query($sql);
     }
 
-    function printLetter($id){
+    function choice($id){
         $sql = "SELECT letter FROM letters WHERE id=$id";
-        $conn = $this->_db->query($sql);
-        echo $conn;
+        $res=$this->_db->query($sql);
+        return $res;
+    }
+   //     $conn = $this->_db->query($sql);
+    //    echo $conn;
        // $stream = openBlob('letters', 'letter', 3, 'main', SQLITE3_OPEN_READWRITE);
        // echo stream_get_contents($stream);
       //  fclose($stream); 
         
-    }
+  //  }
 }
 

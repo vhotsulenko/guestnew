@@ -12,10 +12,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
        $result = $_POST["res"];
        $result = require 'deleteletter.inc.php'; 
        header("Location: index.php");
-    } else if (isset($_POST["prt"])){
-        $result = $_POST["prt"];
-        $gbook->printLetter($result);
-        return;
     } else
     require 'saveletter.inc.php';
 }
