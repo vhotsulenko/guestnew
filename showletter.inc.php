@@ -23,14 +23,19 @@ if(count ($allletters)>0){
             <input type="hidden" name="res" value = "<?php echo $id ?>" label ="">
             <input type="image" width=36px src="close.png" alt="удалить" label =""align="right">
         </form>
-        <form action="mybook.php" method="POST">
-            <input type="hidden" name="prt" value = "<?php echo $id ?>" label ="">
-            <input type="image" width=36px src="print.png" alt="печать" label ="" align="right">
-        </form>
+        
+            
+            <input type="image"  src="print.png" align="right" width=36px onclick="alert('<?php echo $letter ?>')" >
+      
         </div>
         
     </div>
     <div class="clear"></div>
+<script type="text/JavaScript"> 
+      //     function print_letter (txt) {
+        //       alert('txt')
+       //    }
+   </script>
     <?php 
     }    
 }

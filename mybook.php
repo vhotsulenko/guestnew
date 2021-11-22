@@ -12,11 +12,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
        $result = $_POST["res"];
        $result = require 'deleteletter.inc.php'; 
        header("Location: index.php");
-    } else if (isset($_POST["prt"])){
-        $result = $_POST["res"];
-        $result = require 'choiseletter.inc.php'; 
-        header("Location: index.php");
-        } else
+       } else
     require 'saveletter.inc.php';
 }
 ?>
