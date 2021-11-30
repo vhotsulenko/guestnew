@@ -10,6 +10,7 @@ if(count ($allletters)>0){
         $letter = $row['letter'];
         @$dt = date("d-m-Y H:i:s", $row['datetime']*1);
     ?>
+      <script src="print.min.js"></script>
     <div class="quote">
         <div class="quote-icon">
                 <div class="icon-img" style="background-color: #ff3333"></div>
@@ -25,25 +26,26 @@ if(count ($allletters)>0){
         </form>
         
             
-            <input id="prt" type="image"  src="print.png" align="right" width=36px >
+            <input type="image" src="print.png" align="right" width=36px onclick="prt('<?php echo $letter ?>')">
       
         </div>
         
     </div>
-    <div class="clear"></div>
+    <div class="clear">
+      </div>
 
-    <script type="text/JavaScript"> 
-  prt.onclick = function() {
-    alert('Спасибо');
-    alert('<?php echo $letter ?>');
-  };
-</script>
+ 
 
-<script type="text/JavaScript"> 
-      //     function print_letter (txt) {
-        //       alert('txt')
-       //    }
-   </script>
+  <script type="text/JavaScript"> 
+     function prt(str) {
+         // var str1=str;
+          alert(str);
+          printJS('printJS-form', 'html')
+   }
+  </script>
+   
+
+
     <?php 
     }    
 }
