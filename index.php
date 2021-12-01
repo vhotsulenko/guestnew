@@ -39,18 +39,13 @@ if(isset($_GET['del'])){
                     }   
                     ?>
 		  <form id="form1" name="form1" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-			<table>
-			<tbody><tr><td><p>Ваше имя</p></td><td><input type="text" name="gname"></td>
-	      	</tr><tr>
-		    <td><p>Ваш отзыв</p></td>
-			<td>
-		      <textarea name="letter" cols="40" rows="4"></textarea></td>
-			</tr>
-			
-			<tr><td> </td><td>
-			  <input type="submit" name="Submit" value="Оставить отзыв"></td>
-			</tr>
-			</tbody></table>
+
+          <div class="grid">
+			<div>Ваше имя: <input type="text" name="gname"></div>
+            <div>Ваш отзыв: </div><div><textarea name="letter" cols="80" rows="8"></textarea></div>
+			<div><input type="submit" name="Submit" value="Оставить отзыв"></div>
+		  </div>
+
 		  </form>
                   
 </section>
