@@ -48,7 +48,16 @@ if(count ($allletters)>0){
           Letter: str
          }
         ]
-      printJS({printable: JSONdata, properties: ['Name','Letter'], type: 'json'})
+      printJS({printable: JSONdata, 
+      properties: [
+		{ field: 'Name', displayName: 'Имя'},
+		{ field: 'Letter', displayName: 'отзыв'}
+	    ],
+        type: 'json',
+        /*gridHeaderStyle: 'color: red;  border: 2px solid #3971A5;',*/
+	    gridStyle: 'border: none'
+        /*2px solid #3971A5;'*/
+        })
      }
   </script>
    
