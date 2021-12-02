@@ -78,7 +78,7 @@ input[type="submit"], input[type="reset"], input[type="button"] {
     line-height: 26px;
     padding: 1px 12px 0px 12px;
     display: inline-block;
-    background: #eee;
+    background: #8AB244;
     font-weight: bold;
     cursor: pointer;
     -webkit-border-radius: 3px;
@@ -113,26 +113,18 @@ input[type=text]:focus{
 }
 .grid * {
     padding: 10px 15px;
-    background-color: rgb(96, 143, 204);
-    border: 1px solid rgb(24, 84, 133);
+   /* background-color: rgb(96, 143, 204);
+    border: 1px solid rgb(24, 84, 133);*/
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
     font-family: sans-serif;
-    color: #fff;
+    color: #1E1E1E;
   }
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
    /* grid-template-columns: repeat(3,1fr);*/
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr 50px;
     grid-gap: 20px 10px;
     
-  }
-  .grid2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-   /* grid-template-columns: repeat(3,1fr);*/
-    grid-template-rows: repeat(2,1fr);
-    grid-gap: 20px 10px;
-    
-  }
+  }  

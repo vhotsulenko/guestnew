@@ -1,7 +1,7 @@
 <?php
 //Вызовем метод showLetter, результат сохраним в $allletters
 $allletters=$gbook->showLetter();
-///* <script src="print.min.js"></script>*/
+//<script src="print.min.js"></script>
 //Используя цикл, выведите в браузер все сообщения
 if(count ($allletters)>0){
     foreach($allletters as $row){
@@ -27,7 +27,7 @@ if(count ($allletters)>0){
             <input type="hidden" name="res" value = "<?php echo $id ?>" label ="">
             <input type="image" width=36px src="close.png" alt="удалить" label =""align="right">
             
-        </form><input type="image" src="print.png" align="right" width=36px onclick="alert('<?php echo $letter ?>')">
+        </form><input type="image" src="print.png" align="right" width=36px onclick="prt('<?php echo $gname ?>','<?php echo $letter ?>')">
     </div>
     </div>
            <div>
@@ -39,18 +39,19 @@ if(count ($allletters)>0){
     <div class="clear">
       </div>
 
- 
-
+     
   <script type="text/JavaScript"> 
-     function prt(str) {
-         // var str1=str;
-          alert(str);
-         // printJS('printJS-form', 'html')
-   }
+     function prt(name, str) {
+        JSONdata = [
+         {
+          Name: name,
+          Letter: str
+         }
+        ]
+      printJS({printable: JSONdata, properties: ['Name','Letter'], type: 'json'})
+     }
   </script>
    
-
-
     <?php 
     }    
 }

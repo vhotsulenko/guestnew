@@ -23,6 +23,7 @@ if(isset($_GET['del'])){
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css">
+        <script src="print.min.js"></script>
     </head>
     <body>
         <section id="content" class="container">
@@ -30,7 +31,7 @@ if(isset($_GET['del'])){
                     <?php
                         require 'showletter.inc.php';
                     ?>
-                   <h2>Оставить отзыв</h2>
+                  <hr>
                    <?php
                     //Проверим, не является ли переменная $errMessage пустой строкой
                     //Если НЕТ, то выведите значение переменной $errMessage
@@ -39,11 +40,11 @@ if(isset($_GET['del'])){
                     }   
                     ?>
 		  <form id="form1" name="form1" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-
+             <br>
           <div class="grid">
-			<div>Ваше имя: <input type="text" name="gname"></div>
-            <div>Ваш отзыв: </div><div><textarea name="letter" cols="80" rows="8"></textarea></div>
-			<div><input type="submit" name="Submit" value="Оставить отзыв"></div>
+			<div>Ваше имя: </div><div><input type="text" name="gname"></div><div></div>
+            <div>Ваш отзыв:</div><div><textarea name="letter" cols="40" rows="6"></textarea></div><div></div>
+			<div></div><input type="submit" name="Submit" value="Оставить отзыв"></div><div></div>
 		  </div>
 
 		  </form>
