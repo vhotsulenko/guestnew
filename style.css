@@ -20,6 +20,13 @@ body{
     margin-right: 5px;
     margin-top: 19px;
 }
+.quote-icon2{
+    display: block;
+    float: left;
+    width: 43px;
+    margin-right: 5px;
+    margin-top: 19px;
+}
 .quote-close {
     display: block;
     float: left;

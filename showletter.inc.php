@@ -21,14 +21,16 @@ if(count ($allletters)>0){
                 <p class="droid"><strong><?php echo $gname ?></strong><span class="data"><?php echo @$dt ?></span><br><?php echo $letter ?></p>
         </div>
         
-         <div> 
+        <div class="quote-icon2">
         <form class="quo" action="mybook.php" method="POST"> 
            
             <input type="hidden" name="res" value = "<?php echo $id ?>" label ="">
             <input type="image" width=36px src="close.png" alt="удалить" label =""align="right">
             
-        </form><input type="image" src="print.png" align="right" width=36px onclick="prt('<?php echo $gname ?>','<?php echo $letter ?>')">
-    </div>
+        </form>
+       <input type="image" src="print.png" align="right" width=36px onclick="prt('<?php echo $gname ?>','<?php echo $letter ?>')">
+        
+       </div>
     </div>
            <div>
             
